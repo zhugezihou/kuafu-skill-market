@@ -1,0 +1,29 @@
+name: Markdown 文档撰写与排版
+description: 撰写高质量 Markdown 文档，包含结构规划、代码块、表格、流程图和格式优化
+version: 1.1.0
+author: kuafu-community
+category: writing
+keywords:
+  - markdown
+  - 写作
+  - 文档
+  - 排版
+  - 技术文档
+  - README
+steps:
+  - 明确文档类型（README/API 文档/教程/技术博客）和目标读者
+  - 规划文档结构：标题层级、目录导航、前后章节逻辑
+  - 撰写正文：清晰的开篇说明、分步操作指南、注意事项
+  - 添加代码块（指定语言，启用语法高亮）、表格、列表、引用
+  - 使用 Mermaid 流程图或 ASCII 图表增强说明
+  - 检查格式一致性：标题层级不跳级、列表缩进统一、链接有效性
+  - 优化可读性：适当分段、加粗关键术语、添加折叠详情
+pitfalls:
+  - 标题层级不要跳级（h1 → h3），保持语义连贯
+  - 代码块指定语言有助于语法高亮（```python 而非 ```）
+  - 中文和英文之间加空格可提高可读性
+  - Markdown 的表格功能有限，复杂表格考虑用 HTML
+  - 图片使用相对路径，便于项目迁移
+created_at: 1740100200
+usage_count: 0
+source: market_install

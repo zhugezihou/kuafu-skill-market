@@ -1,0 +1,32 @@
+name: 数据库查询与维护
+description: 使用 Python 连接 SQLite/MySQL/PostgreSQL，执行查询和维护操作
+version: 1.0.0
+author: kuafu-community
+category: data-science
+keywords:
+  - 数据库
+  - SQL
+  - SQLite
+  - 数据查询
+  - 数据维护
+  - 数据导出
+dependencies:
+  packages:
+    - sqlite3
+steps:
+  - 确认数据库类型和连接信息（路径/主机/端口/认证）
+  - 建立数据库连接，设置超时和字符集
+  - 执行查询：SELECT/INSERT/UPDATE/DELETE，参数化查询防注入
+  - 导出查询结果为 CSV 或 JSON 格式
+  - 执行数据维护：创建索引、分析表、VACUUM
+  - 备份数据库文件（SQLite 直接复制文件）
+  - 关闭连接，清理资源
+pitfalls:
+  - 始终使用参数化查询（? 占位符）防止 SQL 注入
+  - 大量数据写入使用事务批量提交
+  - 生产数据库不要在高峰期执行耗时维护操作
+  - SQLite 并发写入需启用 WAL 模式
+  - 连接数据库后务必关闭连接
+created_at: 1740101200
+usage_count: 0
+source: market_install

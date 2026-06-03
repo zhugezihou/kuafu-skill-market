@@ -1,0 +1,33 @@
+name: API 接口测试
+description: 使用 Python 或 curl 对 REST API 进行接口测试，验证请求和响应数据
+version: 1.1.0
+author: kuafu-community
+category: coding
+keywords:
+  - API test
+  - REST API
+  - 接口测试
+  - curl
+  - requests
+  - 调试
+dependencies:
+  packages:
+    - requests
+  tools:
+    - curl
+steps:
+  - 确认 API 端点、HTTP 方法、请求头、认证方式和请求体格式
+  - 构造请求并发送，包含合理的超时设置
+  - 验证状态码、响应头、响应体结构和数据类型
+  - 测试边界情况：空参数、超大输入、特殊字符、错误认证
+  - 记录请求和响应日志，便于问题排查
+  - 对关键接口编写可重复的测试用例
+pitfalls:
+  - API 返回格式可能在不同环境下有差异
+  - 注意请求频率限制（rate limiting）
+  - POST/PUT 请求注意 Content-Type 要匹配
+  - 认证 token 过期时自动刷新
+  - 返回数据量大时启用流式读取或分页
+created_at: 1740100700
+usage_count: 0
+source: market_install

@@ -1,0 +1,31 @@
+name: JSON 数据处理
+description: 使用 Python 或 jq 对 JSON 数据进行查询、过滤、转换和格式化
+version: 1.0.0
+author: kuafu-community
+category: productivity
+keywords:
+  - JSON
+  - 数据处理
+  - jq
+  - 数据转换
+  - 格式化
+  - Python
+dependencies:
+  tools:
+    - python3
+steps:
+  - 分析 JSON 数据结构（层级、字段类型、数组/嵌套关系）
+  - 使用 Python json 模块或 jq 命令行工具查询特定字段
+  - 过滤数据：按条件筛选对象、提取字段子集、排序
+  - 转换格式：JSON → CSV、JSON → Markdown 表格、JSON → YAML
+  - 合并多个 JSON 文件：按 key 合并数组、深度合并对象
+  - 格式化输出：缩进、排序 key、中文字符不转义（ensure_ascii=False）
+  - 对大型 JSON 文件使用 ijson 流式解析
+pitfalls:
+  - 大 JSON 文件不要全部加载到内存（使用 ijson 或 jq --stream）
+  - Python 的 json.load() 默认不对 key 排序
+  - JSON 路径表达式在不同工具中语法不同（jq 用 . 而非 $）
+  - 处理日期字符串时提前统一时区
+created_at: 1740101000
+usage_count: 0
+source: market_install

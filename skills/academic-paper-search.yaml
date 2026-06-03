@@ -1,0 +1,30 @@
+name: 学术论文检索与摘要
+description: 在 arXiv、PubMed、Semantic Scholar 等学术平台搜索论文，提取摘要和关键信息
+version: 1.2.0
+author: kuafu-community
+category: research
+keywords:
+  - paper search
+  - academic research
+  - 学术论文
+  - 文献检索
+  - arXiv
+  - 论文摘要
+dependencies:
+  packages:
+    - requests
+  tools:
+    - curl
+steps:
+  - 确认用户的研究主题和关键词，确定搜索范围和数据库
+  - 使用 arXiv API 搜索相关论文（title_abs+keywords）
+  - 提取每篇论文的标题、作者、摘要、发表时间、PDF 链接
+  - 按相关度和引用数排序，去重并格式化输出
+  - 生成结构化摘要报告（Markdown 格式），包含论文要点
+pitfalls:
+  - arXiv API 有频率限制，请求间隔至少 3 秒
+  - 部分论文摘要可能不完整，建议返回 PDF 链接供用户自行查看
+  - 中文关键词在英文数据库中效果较差，建议中英文混合搜索
+created_at: 1740100000
+usage_count: 0
+source: market_install

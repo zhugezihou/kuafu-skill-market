@@ -1,0 +1,35 @@
+name: CSV 数据分析与可视化
+description: 使用 Python 加载 CSV 数据，进行统计分析、过滤聚合并生成可视化图表
+version: 1.2.0
+author: kuafu-community
+category: data-science
+keywords:
+  - data analysis
+  - 数据分析
+  - CSV
+  - 可视化
+  - matplotlib
+  - pandas
+  - 统计
+dependencies:
+  packages:
+    - pandas
+    - matplotlib
+  tools:
+    - python3
+steps:
+  - 读取 CSV 文件，检查数据质量（空值、类型、重复行、异常值）
+  - 执行数据清洗：填充/删除空值、类型转换、去除重复
+  - 进行描述性统计分析（均值、中位数、标准差、分位数）
+  - 按分组执行聚合计算（groupby + sum/mean/count）
+  - 生成可视化图表：折线图、柱状图、散点图、箱线图、热力图
+  - 保存图表到 charts/ 目录，输出分析报告 Markdown
+  - 给出数据洞察和异常发现
+pitfalls:
+  - 大 CSV 文件不要全部加载到内存，用 chunksize 分批读取
+  - 日期列需要提前解析为 datetime 类型
+  - 中文乱码问题：指定 encoding='utf-8' 或 'gbk'
+  - matplotlib 默认不支持中文标签，需配置中文字体
+created_at: 1740100300
+usage_count: 0
+source: market_install

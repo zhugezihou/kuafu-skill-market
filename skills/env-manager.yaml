@@ -1,0 +1,31 @@
+name: 环境变量与配置管理
+description: 管理系统环境变量和配置文件，确保敏感信息安全和环境一致性
+version: 1.0.0
+author: kuafu-community
+category: devops
+keywords:
+  - 环境变量
+  - 配置管理
+  - dotenv
+  - 敏感信息
+  - .env
+  - 配置文件
+dependencies:
+  packages:
+    - python-dotenv
+steps:
+  - 确认项目需要的环境变量列表和默认值
+  - 创建 .env.example 模板文件（不含真实密钥）
+  - 使用 python-dotenv 加载 .env 文件到系统环境
+  - 验证所有必需变量是否已设置，缺失时给出清晰提示
+  - 检查是否有敏感文件被提交到 git（.env、*.pem、*.key）
+  - 推荐 .gitignore 配置，保护敏感文件
+  - 支持多环境配置（development/staging/production）
+pitfalls:
+  - .env 文件绝对不要提交到 Git 仓库
+  - .env.example 要包含所有变量但值留空或使用占位符
+  - 不同环境的配置差异应通过环境名区分，而非复制整个文件
+  - 密码中含有特殊字符时需要正确转义
+created_at: 1740100600
+usage_count: 0
+source: market_install

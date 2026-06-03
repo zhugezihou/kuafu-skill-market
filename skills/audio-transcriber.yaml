@@ -1,0 +1,35 @@
+name: 音频转文字
+description: 使用本地 Whisper 或云端 API 将音频文件转换为文字，支持多语言和说话人识别
+version: 1.0.0
+author: kuafu-community
+category: media
+keywords:
+  - ASR
+  - speech to text
+  - 语音识别
+  - 音频转文字
+  - whisper
+  - 转录
+dependencies:
+  tools:
+    - ffmpeg
+  notes:
+    - 需要安装 Whisper（pip install openai-whisper）
+    - 或配置云端 ASR API（如阿里云/腾讯云）
+steps:
+  - 确认音频格式和采样率，必要时使用 ffmpeg 转换格式（推荐 16kHz WAV）
+  - 分割长音频为合理片段（如每段 30 秒，避免 Whisper 上下文溢出）
+  - 使用 Whisper 模型进行语音识别（base/small/medium 根据精度需求选择）
+  - 选择输出格式：纯文本、SRT 字幕、带时间戳的 JSON
+  - 处理专有名词和领域术语（自定义词汇表）
+  - 校对和修正识别错误（尤其是中英文混合内容）
+  - 可选：多说话人场景下做说话人分离
+pitfalls:
+  - 背景噪音严重影响识别准确率
+  - 中文识别建议用 large 模型，base/small 对中文支持较弱
+  - 长音频转录需要 GPU 加速，CPU 模式慢很多
+  - 多人对话场景需要 VAD 分段后再识别
+  - ffmpeg 安装可能需要在系统层面配置
+created_at: 1740100900
+usage_count: 0
+source: market_install

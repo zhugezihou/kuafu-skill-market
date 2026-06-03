@@ -1,0 +1,35 @@
+name: Python 单元测试编写
+description: 使用 unittest/pytest 为 Python 代码编写单元测试，覆盖函数、类和边界情况
+version: 1.0.0
+author: kuafu-community
+category: coding
+keywords:
+  - unit test
+  - pytest
+  - 单元测试
+  - TDD
+  - 测试驱动
+  - 代码质量
+dependencies:
+  packages:
+    - pytest
+  tools:
+    - python3
+steps:
+  - 分析被测代码的功能、输入输出和边界条件
+  - 按照测试文件命名规范创建 test_*.py 文件
+  - 编写正常路径测试：验证核心逻辑的正确性
+  - 编写边界测试：空输入、最大值、负数、特殊字符
+  - 编写异常测试：断言抛出的异常类型和错误信息
+  - 使用 fixture 管理测试数据和依赖（mock 外部调用）
+  - 运行 pytest，检查覆盖率和失败用例
+  - 修复失败的测试，确保全部通过
+pitfalls:
+  - 测试不要依赖外部服务（数据库、API），用 mock 替换
+  - 每个测试只测一个逻辑点，不要写"大而全"的测试
+  - 测试名称要能反映测试场景（test_when_input_empty_should_return_default）
+  - 使用 pytest.mark.parametrize 减少重复代码
+  - 临时文件使用 tmp_path fixture 自动清理
+created_at: 1740100800
+usage_count: 0
+source: market_install

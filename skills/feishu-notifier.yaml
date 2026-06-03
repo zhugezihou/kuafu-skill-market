@@ -1,0 +1,30 @@
+name: 飞书消息推送
+description: 通过飞书 Webhook 或 API 向群聊或用户发送消息通知
+version: 1.0.0
+author: kuafu-community
+category: communication
+keywords:
+  - 飞书
+  - 消息通知
+  - webhook
+  - bot
+  - 群消息
+  - 通知推送
+dependencies:
+  packages:
+    - requests
+steps:
+  - 确认通知目标和内容类型（文本/富文本/卡片消息）
+  - 构建飞书 Webhook 请求体（text 或 interactive 格式）
+  - 发送 POST 请求到飞书 Webhook URL
+  - 检查返回结果，处理发送失败的重试逻辑
+  - 可选：使用飞书开放 API 获取 access_token 发送更复杂的消息
+  - 支持定时通知（配合 cron 或 schedule 使用）
+pitfalls:
+  - Webhook URL 包含机器人的密钥，不要硬编码在代码中
+  - 飞书消息有频率限制（群聊每秒最多 5 条）
+  - 卡片消息的 JSON 结构较复杂，建议先用飞书卡片搭建工具测试
+  - 消息长度限制：文本消息不超过 5000 字符
+created_at: 1740100400
+usage_count: 0
+source: market_install

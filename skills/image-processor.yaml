@@ -1,0 +1,33 @@
+name: 图片压缩与格式转换
+description: 使用 Python 对图片进行压缩、格式转换、尺寸调整和批量处理
+version: 1.0.0
+author: kuafu-community
+category: media
+keywords:
+  - image processing
+  - 图片处理
+  - 图片压缩
+  - 格式转换
+  - 批量处理
+  - Pillow
+dependencies:
+  packages:
+    - Pillow
+  tools:
+    - python3
+steps:
+  - 确认用户需求：压缩率、目标格式、尺寸限制、输出目录
+  - 使用 Pillow/PIL 读取源图片，获取原始尺寸和格式信息
+  - 执行格式转换（JPEG/PNG/WebP/GIF 互转）
+  - 执行尺寸调整（等比例缩放/固定尺寸裁剪/填充）
+  - 执行图片压缩（调整质量参数 optimise=True）
+  - 批量处理时保持目录结构，添加进度反馈
+  - 输出前后对比：原始大小 vs 处理后大小
+pitfalls:
+  - PNG 转 JPEG 会丢失透明通道，需先填充背景色
+  - WebP 格式兼容性不如 JPEG，确认使用场景
+  - 批量处理大文件时注意内存消耗
+  - 压缩质量 85% 通常是视觉无损的最佳平衡点
+created_at: 1740100100
+usage_count: 0
+source: market_install
