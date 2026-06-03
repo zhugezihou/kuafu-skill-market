@@ -9,6 +9,10 @@ keywords:
   - code quality
   - 代码质量
   - review
+dependencies:
+  packages:
+    - pyyaml
+    - requests
 steps:
   - 阅读代码变更，理解修改意图和上下文
   - 检查安全性问题（注入、认证、权限、敏感信息泄露）
