@@ -1,0 +1,32 @@
+name: 网页抓取与内容提取
+description: 使用 Python + requests 抓取网页并提取核心内容（标题、正文、元数据）
+version: 1.2.0
+author: kuafu-community
+category: web
+keywords:
+  - web scraping
+  - 网页抓取
+  - content extraction
+  - requests
+  - beautifulsoup
+dependencies:
+  tools:
+    - python3
+  packages:
+    - requests
+    - beautifulsoup4
+    - lxml
+steps:
+  - 分析目标网页结构，确定需要提取的内容区域
+  - 使用 requests 发送 HTTP 请求，设置合理的 User-Agent 和超时
+  - 用 BeautifulSoup 解析 HTML，提取标题、正文、文章发布时间、作者等信息
+  - 处理相对链接、编码问题、去除无关元素（广告、导航栏）
+  - 格式化输出结果（Markdown 或 JSON 格式）
+pitfalls:
+  - 部分网站有反爬机制，需调整 User-Agent 和请求间隔
+  - 动态渲染的页面（SPA）需要配合 Playwright
+  - 注意 robots.txt 和网站使用条款
+  - 大页面建议限制内容大小（默认 300KB）
+created_at: 1740000000
+usage_count: 0
+source: market_install

@@ -1,0 +1,28 @@
+name: Git 工作流管理
+description: 管理 Git 分支、提交、合并、Reabse、Stash 等日常开发操作的最佳实践
+version: 1.1.0
+author: kuafu-community
+category: devops
+keywords:
+  - git
+  - 版本控制
+  - branch
+  - merge
+  - rebase
+  - 工作流
+steps:
+  - 确认当前分支状态（git status, git log --oneline）
+  - 拉取最新远程变更（git fetch --prune）
+  - 创建功能分支或切换到目标分支
+  - 执行提交操作（git add + git commit），检查提交信息规范
+  - 推送并创建 Pull Request，关联 Issue
+  - 处理合并冲突（git merge 或 git rebase）
+  - 清理本地已合并的分支
+pitfalls:
+  - Rebase 前确认没有其他人依赖你的分支
+  - 不要在公共分支上执行 force push
+  - 大文件不应直接提交到 Git 仓库
+  - 提交信息应遵循 Conventional Commits 规范
+created_at: 1740000200
+usage_count: 0
+source: market_install

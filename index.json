@@ -1,0 +1,49 @@
+{
+  "name": "kuafu-skill-market",
+  "description": "夸父（Kuafu）AI Agent 远程技能仓库 — 技能发现、分发与共享平台",
+  "homepage": "https://github.com/zhugezihou/kuafu-skill-market",
+  "version": "1.0.0",
+  "maintainer": "夸父社区",
+  "skills": [
+    {
+      "name": "网页抓取与内容提取",
+      "description": "使用 Python + requests 抓取网页并提取核心内容（标题、正文、元数据）",
+      "version": "1.2.0",
+      "author": "kuafu-community",
+      "category": "web",
+      "keywords": ["web scraping", "网页抓取", "content extraction", "requests", "beautifulsoup"],
+      "steps": 5,
+      "url": "https://raw.githubusercontent.com/zhugezihou/kuafu-skill-market/main/skills/web-scraper.yaml"
+    },
+    {
+      "name": "代码审查助手",
+      "description": "对提交的代码进行系统性审查，检查安全性、性能、代码风格和潜在缺陷",
+      "version": "1.0.0",
+      "author": "kuafu-community",
+      "category": "coding",
+      "keywords": ["code review", "代码审查", "code quality", "review"],
+      "steps": 6,
+      "url": "https://raw.githubusercontent.com/zhugezihou/kuafu-skill-market/main/skills/code-review.yaml"
+    },
+    {
+      "name": "Git 工作流管理",
+      "description": "管理 Git 分支、提交、合并、Rebase、Stash 等日常开发操作的最佳实践",
+      "version": "1.1.0",
+      "author": "kuafu-community",
+      "category": "devops",
+      "keywords": ["git", "版本控制", "branch", "merge", "rebase"],
+      "steps": 7,
+      "url": "https://raw.githubusercontent.com/zhugezihou/kuafu-skill-market/main/skills/git-workflow.yaml"
+    },
+    {
+      "name": "Python 代码调试",
+      "description": "系统性调试 Python 代码，定位并修复 Bug，包含断点调试、日志分析和性能剖析",
+      "version": "1.0.0",
+      "author": "kuafu-community",
+      "category": "coding",
+      "keywords": ["python", "debug", "调试", "bug fix", "pdb", "traceback"],
+      "steps": 6,
+      "url": "https://raw.githubusercontent.com/zhugezihou/kuafu-skill-market/main/skills/python-debugging.yaml"
+    }
+  ]
+}
